@@ -52,6 +52,10 @@ app.use("/users", users);
 //Setup Exercises Data Routes
 app.use("/api/exercises", exercises);
 
+app.use("/", (req, res) => {
+  res.send("Node JS Server Running");
+});
+
 //Starting the server
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
